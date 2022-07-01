@@ -1,6 +1,8 @@
 from selenium import webdriver  # type: ignore
-
-from utils import Data as URL
+from utils import Data as URL  # type: ignore
+import auto_chromedriver  # type: ignore
+ac = auto_chromedriver.auto_chromedriver_installer()
+ac.install()
 
 
 class Browser:

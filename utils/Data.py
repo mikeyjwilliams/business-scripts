@@ -1,2 +1,2 @@
 
-URL: str = 'https://www.amazon.com'
+AMAZON: str = 'https://www.amazon.com'

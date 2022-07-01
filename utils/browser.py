@@ -1,5 +1,7 @@
 from selenium import webdriver  # type: ignore
 
+from utils import Data as URL
+
 
 class Browser:
     '''
@@ -10,7 +12,7 @@ class Browser:
     def __init__(self) -> None:
         self.driver = webdriver.Chrome()
 
-    def browser(self, website: str) -> str:
+    def browser(self, website: str = URL.AMAZON) -> str:
         '''
         function: browser
         params: 

@@ -1,4 +1,4 @@
-from selenium import webdriver
+from selenium import webdriver  # type: ignore
 
 
 class Browser:
@@ -7,10 +7,10 @@ class Browser:
     parameter: driver
     '''
 
-    def __init__(self):
+    def __init__(self) -> None:
         self.driver = webdriver.Chrome()
 
-    def browser(self):
+    def browser(self, website: str) -> str:
         '''
         function: browser
         params: 
@@ -23,9 +23,9 @@ class Browser:
             self.driver object
             to be called when needed.
         '''
-        return self.driver
+        return self.driver.get(website)
 
-    def close_browser(self):
+    def close_browser(self) -> None:
         '''
         function: close_browser
         params: self

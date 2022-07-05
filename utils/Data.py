@@ -1,5 +1,7 @@
 
 AMAZON: str = 'https://www.amazon.com'
+ALIBABA: str = 'https://www.alibaba.com/'
+ULINE: str = 'https://www.uline.com/'
 
 PLASTICPLACE_TRASH_BAGS_SMALL_8_GAL_1000: str = 'https://www.amazon.com/dp/B01JQ9CXJG/?coliid=I22G4KELEWI13O&colid=3VJZHOVI4ZGT4&ref_=lv_ov_lig_dp_it&th=1'
 ALUF_TRASH_BAGS_LARGE_16_GAL_1000: str = 'https://www.amazon.com/dp/B0791YF6DS/?coliid=I3GIZTICJ6VYZ5&colid=3VJZHOVI4ZGT4&psc=1&ref_=lv_ov_lig_dp_it'

@@ -18,6 +18,8 @@ def first_search():
     # whole_number = functions.get_price(plasticplace_page)
     # item_type = functions.get_item_type(plasticplace_page)
     # count_price = functions.get_count_price(plasticplace_page)
+    t = functions.check_count(plasticplace_page)
+    print(t)
 
 
 if __name__ == "__main__":

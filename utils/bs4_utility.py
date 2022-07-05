@@ -16,9 +16,5 @@ def scrape_website(website: object):
                 'Accept-Language': 'en-US, en;q=0.5'})
 
     webpage = requests.get(website, headers=HEADERS)
-    soup = BeautifulSoup(webpage.content, 'lxml')
-    title = soup.find('span', id='productTitle')
-
-    clean_title = title.string
-    # print(clean_title)
-    return clean_title
+    dirty_soup = BeautifulSoup(webpage.content, 'lxml')
+    return dirty_soup

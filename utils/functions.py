@@ -19,17 +19,19 @@ def get_title(data):
 def get_price(data):
     '''
     function: get_price(data) -> float
-    Description: find price and returns
-        the product price as a float value without the
-        dollar sign and stripped of any white spaces.
+    Description: find price and returns price of product.
     '''
-    whole_num = data.find('span', class_='a-offscreen')
-    clean_number = whole_num.string
-    whole_number = clean_number.replace('$', '').strip()
-    return whole_number
+    dirty_price = data.find('span', class_='a-offscreen')
+    clean_price = dirty_price.string
+    price = clean_price.replace('$', '').strip()
+    return price
 
 
 def get_item_type(data):
+    '''
+    function: get_item_type(data) -> string
+    description: find item type and return type
+    '''
     item_type = data.find('span', class_='selection')
     clean_item_type = item_type.string
     return clean_item_type.strip()

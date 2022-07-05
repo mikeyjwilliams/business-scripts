@@ -27,3 +27,16 @@ def get_price(data):
     clean_number = whole_num.string
     whole_number = clean_number.replace('$', '').strip()
     return whole_number
+
+
+def get_item_type(data):
+    item_type = data.find('span', class_='selection')
+    clean_item_type = item_type.string
+    return clean_item_type.strip()
+
+
+def get_count_price(data):
+    span = data.find('span', class_='a-text-price')
+    dirty_price = span.find('span', class_='a-offscreen')
+    clean_price = dirty_price.string
+    return clean_price.replace('$', '').strip()

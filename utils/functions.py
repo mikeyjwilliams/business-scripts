@@ -38,7 +38,20 @@ def get_item_type(data):
 
 
 def get_count_price(data):
+    '''
+    function: get_count_price(data) -> float
+    description: find count and return price of individual
+        item price per the whole price.
+    '''
     span = data.find('span', class_='a-text-price')
     dirty_price = span.find('span', class_='a-offscreen')
     clean_price = dirty_price.string
     return clean_price.replace('$', '').strip()
+
+#! issue Nonetype has no attribute 'strip'
+
+
+def check_count(data):
+    price_per_unit = data.find('span', class_='pricePerUnit')
+    clean_ppu = price_per_unit.string
+    return clean_ppu.strip()

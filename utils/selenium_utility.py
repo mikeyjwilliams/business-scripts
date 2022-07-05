@@ -7,6 +7,18 @@ class Base:
     def __init__(self, driver):
         self.driver = driver
 
+    def __str__(self):
+        '''
+        string representation of the driver object
+        '''
+        return f'Driver: {self.driver}'
+
+    def __repr__(self):
+        '''
+        object representation of the driver object
+        '''
+        return f'{self.__class__.__name__}: {self.__self.__dict__}'
+
     def assert_not_false(self, bool_var: bool, assertion_phrase: str = None):
         '''
         function: assert_not_false

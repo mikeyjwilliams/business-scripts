@@ -14,7 +14,9 @@ def main():
 def first_search():
     plasticplace_page = bs4_utility.scrape_website(
         Data.PLASTICPLACE_TRASH_BAGS_SMALL_8_GAL_1000)
-    title = functions.get_title(plasticplace_page)
+    # title = functions.get_title(plasticplace_page)
+    whole_number = get_price(plasticplace_page)
+    print(whole_number)
 
 
 if __name__ == "__main__":

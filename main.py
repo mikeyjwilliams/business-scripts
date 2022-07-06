@@ -12,13 +12,32 @@ def main():
 
 
 def first_search():
-    plasticplace_page = bs4_utility.scrape_website(
+    try:
+        plasticplace_page = bs4_utility.scrape_website(
         Data.PLASTICPLACE_TRASH_BAGS_SMALL_8_GAL_1000)
-    # title = functions.get_title(plasticplace_page)
-    # whole_number = functions.get_price(plasticplace_page)
-    # item_type = functions.get_item_type(plasticplace_page)
-    # count_price = functions.get_count_price(plasticplace_page)
-    t = functions.check_count(plasticplace_page)
+    except BaseException as err:
+        print(f"Unexpected {err=}, {type(err)=}")
+    # try:
+    #     title = functions.get_title(plasticplace_page)
+    # except BaseException as err:
+    #     print(f"Unexpected {err=}, {type(err)=}")
+    # try:
+    #     whole_number = functions.get_price(plasticplace_page)
+    # except BaseException as err:
+    #     print(f"Unexpected {err=}, {type(err)=}")
+    # try:
+    #     item_type = functions.get_item_type(plasticplace_page)
+    # except BaseException as err:
+    #     print(f"Unexpected {err=}, {type(err)=}")
+    # try:
+    #     count_price = functions.get_count_price(plasticplace_page)
+    # except BaseException as err:
+    #     print(f"Unexpected {err=}, {type(err)=}")
+    # try:
+        t = functions.check_count(plasticplace_page)
+    # except BaseException as err:
+    #     print(f"Unexpected {err=}, {type(err)=}")
+        
     print(t)
 
 
